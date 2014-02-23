@@ -29,6 +29,7 @@ RUN /opt/scripts/key_sync /opt/keys/default /home/$ADMIN/.ssh/authorized_keys no
 ADD zshrc /home/$ADMIN/.zshrc
 
 RUN chown -R $ADMIN:$ADMIN /home/$ADMIN
+RUN passwd -d $ADMIN
 
 ADD sshd_config /etc/ssh/sshd_config
 ADD run /etc/sv/sshd/run
