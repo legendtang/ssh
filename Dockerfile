@@ -13,7 +13,7 @@ RUN useradd \
     --shell /usr/bin/zsh \
     --home-dir /home/$ADMIN \
     --groups remote \
-    --create-home
+    --create-home \
     $ADMIN
 
 RUN git clone git://github.com/akerl/scripts.git /opt/scripts
