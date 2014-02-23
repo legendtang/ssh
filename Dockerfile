@@ -30,5 +30,6 @@ ADD zshrc /home/$ADMIN/.zshrc
 
 RUN chown -R $ADMIN:$ADMIN /home/$ADMIN
 
+ADD sshd_config /etc/ssh/sshd_config
 ADD run /etc/sv/sshd/run
 RUN ln -s /etc/sv/sshd /service/

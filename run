@@ -1,4 +1,5 @@
 #!/bin/sh
 
-exec /usr/bin/nsd -d -c /etc/nsd/nsd.conf 2>&1
+ssh-keygen -A
+exec /usr/bin/sshd -D 2>&1
 
