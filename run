@@ -1,0 +1,4 @@
+#!/bin/sh
+
+exec /usr/bin/nsd -d -c /etc/nsd/nsd.conf 2>&1
+
