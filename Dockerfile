@@ -35,3 +35,8 @@ RUN passwd -d $ADMIN
 ADD sshd_config /etc/ssh/sshd_config
 ADD run /etc/sv/sshd/run
 RUN ln -s /etc/sv/sshd /service/
+
+ADD user-service /etc/sv/user/run
+RUN ln -s /etc/sv/user /service/
+RUN sed -i "s/ADMIN/$ADMIN/" /etc/sv/user/run
+
