@@ -1,13 +1,11 @@
 FROM akerl/arch
 MAINTAINER akerl <me@lesaker.org>
-EXPOSE 22
 ENV ADMIN akerl
 
 RUN pacman -S --noconfirm --needed \
     base-devel cpio curl dnsutils gnupg gpgme htop inetutils iotop iproute2 \
     iputils less lockfile-progs lsof mtr net-tools nmap openssh perl python \
-    python-pip ruby screen socat sqlite strace tar tcpdump tmux vim wget whois \
-    zsh
+    python-pip ruby screen socat strace tar tcpdump tmux vim wget whois zsh
 
 RUN groupadd remote
 RUN useradd \
