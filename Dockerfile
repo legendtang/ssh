@@ -2,7 +2,7 @@ FROM dock0/arch
 MAINTAINER akerl <me@lesaker.org>
 ENV ADMIN akerl
 
-RUN pacman -S --noconfirm --needed \
+RUN pacman -Syu --noconfirm --needed \
     base-devel cpio curl dnsutils gnupg gpgme htop inetutils iotop iproute2 \
     iputils less lockfile-progs lsof mtr net-tools nmap openssh perl python \
     python-pip ruby screen socat strace tar tcpdump tmux vim wget whois zsh
