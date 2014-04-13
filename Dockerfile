@@ -24,6 +24,7 @@ ADD dotdotdot.conf /home/$ADMIN/.../conf
 RUN git clone git://github.com/akerl/keys.git /opt/keys
 RUN mkdir /home/$ADMIN/.ssh
 RUN /opt/scripts/key_sync /opt/keys/default /home/$ADMIN/.ssh/authorized_keys noconfirm
+RUN /opt/scripts/key_sync /opt/keys/default /root/.ssh/authorized_keys noconfirm
 
 ADD known_hosts /home/$ADMIN/.ssh/known_hosts
 
