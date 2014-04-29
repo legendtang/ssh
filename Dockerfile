@@ -22,7 +22,7 @@ RUN git clone git://github.com/ingydotnet/....git /home/$ADMIN/...
 ADD dotdotdot.conf /home/$ADMIN/.../conf
 
 RUN git clone git://github.com/akerl/keys.git /opt/keys
-RUN mkdir /home/$ADMIN/.ssh
+RUN mkdir /home/$ADMIN/.ssh /root/.ssh
 RUN /opt/scripts/key_sync /opt/keys/default /home/$ADMIN/.ssh/authorized_keys noconfirm
 RUN /opt/scripts/key_sync /opt/keys/default /root/.ssh/authorized_keys noconfirm
 
