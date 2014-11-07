@@ -1,7 +1,7 @@
 FROM dock0/service
 MAINTAINER akerl <me@lesaker.org>
 ENV ADMIN akerl
-RUN pacman -Syu --noconfirm --needed gnupg gpgme openssh
+RUN pacman -S --noconfirm --needed gnupg gpgme openssh
 RUN groupadd remote
 RUN useradd -d /home/$ADMIN -G remote -m $ADMIN
 RUN git clone git://github.com/akerl/scripts.git /opt/scripts
