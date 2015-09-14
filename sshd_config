@@ -27,7 +27,7 @@ PasswordAuthentication no
 
 AllowGroups remote
 
-Group remote
+Match group remote
     AuthorizedKeysFile /var/lib/ssh/cache %h/.ssh/authorized_keys
     AuthorizedKeysCommand /var/lib/ssh/sync
     AuthorizedKeysCommandUser ssh_key_sync
