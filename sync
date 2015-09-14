@@ -2,8 +2,7 @@
 
 set -e
 
-cd /var/lib/ssh/keys
+cd /var/lib/ssh/cache/repo
 git pull
-find strong -mindepth 1 -type f -exec cat {} \; > ../new_cache
-mv ../new_cache ../cache
+find strong -mindepth 1 -type f -exec cat {} \; | tee ../keys
 

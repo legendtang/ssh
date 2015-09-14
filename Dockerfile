@@ -2,8 +2,8 @@ FROM dock0/service
 MAINTAINER akerl <me@lesaker.org>
 RUN pacman -S --noconfirm --needed openssh
 
-RUN useradd -d /var/lib/ssh -m ssh_key_sync
-RUN su - ssh_key_sync -c 'git clone git://github.com/akerl/keys.git /var/lib/ssh/keys'
+RUN useradd -d /var/lib/ssh/cache -m ssh_key_sync
+RUN su - ssh_key_sync -c 'git clone git://github.com/akerl/keys.git /var/lib/ssh/cache/repo'
 ADD sshd_config /etc/ssh/sshd_config
 ADD run /service/sshd/run
 ADD sync /var/lib/ssh/sync
