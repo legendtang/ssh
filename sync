@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -e
+
+cd /var/lib/ssh/keys
+git pull
+find strong -mindepth 1 -type f -exec cat {} \; > ../new_cache
+mv ../new_cache ../cache
+
