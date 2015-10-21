@@ -9,4 +9,4 @@ test:
     - docker run -ti test /bin/true
     - docker run -ti test /bin/bash --version
     - docker run -d 20:22 test ; sleep 5
-    - echo " " | telnet localhost 22
+    - echo ' ' | netcat localhost 22
