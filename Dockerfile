@@ -1,4 +1,4 @@
-FROM dock0/service
+FROM hub-mirror.c.163.com/dock0/service
 MAINTAINER akerl <me@lesaker.org>
 RUN pacman -S --noconfirm --needed openssh
 
